@@ -2,6 +2,8 @@ package com.project.bankingapp;
 
 import java.util.Scanner;
 
+import com.project.models.User;
+
 public class App {
 
 	public static void main(String[] args) {

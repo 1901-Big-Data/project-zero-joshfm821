@@ -1,4 +1,4 @@
-package com.project.bankingapp;
+package com.project.models;
 
 public class User {
 	private String number;
