@@ -1,23 +1,41 @@
 package com.project.bankingapp;
 
 import java.util.Scanner;
-
 import com.project.models.User;
 
 public class App {
-
+	static Scanner userInput;
 	public static void main(String[] args) {
-		
-		
-		User testAccount = new User();
+		userInput = new Scanner(System.in);
+		startMenu();
+		System.out.println("Enter a number: ");
+		int n = userInput.nextInt();
+		/*User testAccount = new User();
 		testAccount.withdrawal(100.00);
 		testAccount.deposit(50.00);
 		testAccount.withdrawal(51.00);
 		testAccount.deposit(100.00);
-		testAccount.withdrawal(100.00);
+		testAccount.withdrawal(100.00);*/
 		
-		//startMenu();
+		
+		
+		
+		userInput.close();
 
+	}
+public static void userChoices() {
+		String input = userInput.nextLine();
+		startMenu();
+		switch (input) {
+        case "1": 
+        	System.out.println("Login Screen please enter your username and password ");
+                 break;
+        case "2": 
+        	System.out.println("Please your information below ");
+                 break;
+        default: 
+                 break;
+		}
 	}
 
 	public static void startMenu() {
@@ -26,6 +44,7 @@ public class App {
 		System.out.println("*           Welcome to JDBCBank         *");
 		System.out.println("* 1. Login *");
 		System.out.println("* 2. Register *");
+		userChoices();
 	}
 	
 	public static void loginMenu() {
@@ -63,5 +82,4 @@ public class App {
 		System.out.println("* 4. Deposit or Withdrawal from an Account ");
 		System.out.println("* 5. Logout ");
 	}
-
 }
